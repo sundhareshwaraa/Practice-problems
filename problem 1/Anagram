@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class Anagram {
+
+	public static void main(String[] args) {
+		String s1 = "Care";
+		String s2 = "Race";
+		char arr1[] = s1.toLowerCase().toCharArray();
+		char arr2[] = s2.toLowerCase().toCharArray();
+		if(arr1.length == arr2.length){
+			int count = 0;
+      for(int i=0;i<arr1.length;i++){
+				for(int j=0;j<arr2.length;j++){
+					if(arr1[i] == arr2[j]){
+						count = count+1;
+					}
+				}
+			}
+			if(count == arr1.length){
+				System.out.println("Anagram");
+			}else{
+				System.out.println("Not Anagram");
+			}
